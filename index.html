@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow"> <!-- ここでnoindexを設定 -->
+    <meta name="robots" content="noindex, nofollow">
     <title>Redirect Page</title>
     <style>
-        /* 全体のスタイル */
         body {
             display: flex;
             justify-content: center;
@@ -14,18 +13,16 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8; /* 背景色 */
+            background-color: #f8f8f8
         }
 
-        /* メッセージのスタイル */
         h1 {
             font-size: 2em;
-            color: #FF6347; /* 赤色 */
+            color: #FF6347;
             text-align: center;
             animation: fadeIn 1s ease-in-out;
         }
 
-        /* アニメーション: フェードイン */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -40,8 +37,8 @@
     <h1>Redirecting...</h1>
     <script>
         setTimeout(function() {
-            window.location.href = "https://example.nl"; // ここに遷移先のURLを設定
-        }, 0); // 1000ミリ秒 (1秒) 後にリダイレクト
+            window.location.href = "https://example.nl";
+        }, 0);
     </script>
 </body>
 </html>
