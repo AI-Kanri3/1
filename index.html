@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-   <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GG96Z8GCGK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
+
       gtag('config', 'G-GG96Z8GCGK');
     </script>
     <meta charset="UTF-8">
@@ -49,6 +49,16 @@
 <body>
     <h1>404</h1>
     <p>お探しのページは見つかりませんでした。</p>
-    <a href="/">トップページへ戻る</a>
+    <a href="/" id="back-to-home">トップページへ戻る</a>
+
+    <script>
+      document.getElementById('back-to-home').addEventListener('click', function() {
+        gtag('event', 'click', {
+          'event_category': 'Navigation',
+          'event_label': 'Back to Home',
+          'transport_type': 'beacon'
+        });
+      });
+    </script>
 </body>
 </html>
