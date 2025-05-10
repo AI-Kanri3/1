@@ -7,7 +7,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-GG96Z8GCGK');
     </script>
     <meta charset="UTF-8">
@@ -51,12 +50,16 @@
     <a href="/" id="back-to-home">トップページへ戻る</a>
 
     <script>
-      document.getElementById('back-to-home').addEventListener('click', function() {
+      document.getElementById('back-to-home').addEventListener('click', function(event) {
+        event.preventDefault(); // ページ遷移を一時防止
         gtag('event', 'click', {
           'event_category': 'Navigation',
           'event_label': 'Back to Home',
           'transport_type': 'beacon'
         });
+        setTimeout(function() {
+          window.location.href = "/";
+        }, 200); // 200ms 後に遷移、イベント送信保証
       });
     </script>
 </body>
